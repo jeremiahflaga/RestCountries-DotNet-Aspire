@@ -18,7 +18,7 @@ namespace SampleApp.TestProject
         public static async Task SetUp()
         {
             // Arrange
-            var appHost = await DistributedApplicationTestingBuilder.CreateAsync<Projects.SampleApp_AppHost>();
+            var appHost = await DistributedApplicationTestingBuilder.CreateAsync<Projects.RestCountries_AppHost>();
             appHost.Services.ConfigureHttpClientDefaults(clientBuilder =>
             {
                 clientBuilder.AddStandardResilienceHandler();

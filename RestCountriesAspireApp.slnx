@@ -1,0 +1,9 @@
+<Solution>
+  <Folder Name="/SampleApp/">
+    <Project Path="SampleApp/SampleApp.ApiService/SampleApp.ApiService.csproj" />
+    <Project Path="SampleApp/SampleApp.WebApp/SampleApp.WebApp.csproj" />
+  </Folder>
+  <Project Path="RestCountries.AppHost/RestCountries.AppHost.csproj" />
+  <Project Path="RestCountries.ServiceDefaults/RestCountries.ServiceDefaults.csproj" />
+  <Project Path="SampleApp/SampleApp.TestProject/SampleApp.TestProject.csproj" />
+</Solution>

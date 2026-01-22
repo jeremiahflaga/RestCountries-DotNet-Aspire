@@ -17,8 +17,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\SampleApp.ApiService\SampleApp.ApiService.csproj" />
-    <ProjectReference Include="..\SampleApp.WebApp\SampleApp.WebApp.csproj" />
+    <ProjectReference Include="..\SampleApp\SampleApp.ApiService\SampleApp.ApiService.csproj" />
+    <ProjectReference Include="..\SampleApp\SampleApp.WebApp\SampleApp.WebApp.csproj" />
   </ItemGroup>
 
 </Project>

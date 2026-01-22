@@ -1,7 +1,0 @@
-<Solution>
-  <Project Path="SampleApp.ApiService/SampleApp.ApiService.csproj" />
-  <Project Path="SampleApp.AppHost/SampleApp.AppHost.csproj" />
-  <Project Path="SampleApp.ServiceDefaults/SampleApp.ServiceDefaults.csproj" />
-  <Project Path="SampleApp.TestProject/SampleApp.TestProject.csproj" />
-  <Project Path="SampleApp.WebApp/SampleApp.WebApp.csproj" />
-</Solution>

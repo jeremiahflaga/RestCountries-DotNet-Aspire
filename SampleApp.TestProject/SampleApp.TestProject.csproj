@@ -16,7 +16,7 @@
 
 
   <ItemGroup>
-    <ProjectReference Include="..\..\RestCountries.AppHost\RestCountries.AppHost.csproj" />
+    <ProjectReference Include="..\RestCountries.AppHost\RestCountries.AppHost.csproj" />
   </ItemGroup>
 
   <ItemGroup>

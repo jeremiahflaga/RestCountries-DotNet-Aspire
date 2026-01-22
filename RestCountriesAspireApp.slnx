@@ -5,5 +5,5 @@
   </Folder>
   <Project Path="RestCountries.AppHost/RestCountries.AppHost.csproj" />
   <Project Path="RestCountries.ServiceDefaults/RestCountries.ServiceDefaults.csproj" />
-  <Project Path="SampleApp/SampleApp.TestProject/SampleApp.TestProject.csproj" />
+  <Project Path="SampleApp.TestProject/SampleApp.TestProject.csproj" />
 </Solution>

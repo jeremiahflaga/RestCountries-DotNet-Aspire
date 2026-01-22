@@ -7,10 +7,10 @@ namespace SampleApp.TestProject.Data
         public HttpClient HttpClient { get; private set; } = new();
         public async Task InitializeAsync()
         {
-            HttpClient = (GlobalSetup.App ?? throw new NullReferenceException()).CreateHttpClient("apiservice");
+            HttpClient = (GlobalSetup.App ?? throw new NullReferenceException()).CreateHttpClient("sampleapp-apiservice");
             if (GlobalSetup.NotificationService != null)
             {
-                await GlobalSetup.NotificationService.WaitForResourceAsync("apiservice", KnownResourceStates.Running).WaitAsync(TimeSpan.FromSeconds(30));
+                await GlobalSetup.NotificationService.WaitForResourceAsync("sampleapp-apiservice", KnownResourceStates.Running).WaitAsync(TimeSpan.FromSeconds(30));
             }
         }
 

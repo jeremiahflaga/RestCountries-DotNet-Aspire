@@ -1,4 +1,7 @@
 <Solution>
+  <Folder Name="/RestCountriesApp/">
+    <Project Path="../RestCountries-BE-DotNet/RestCountries.WebApi/RestCountries.WebApi.csproj" />
+  </Folder>
   <Folder Name="/SampleApp/">
     <Project Path="SampleApp/SampleApp.ApiService/SampleApp.ApiService.csproj" />
     <Project Path="SampleApp/SampleApp.WebApp/SampleApp.WebApp.csproj" />

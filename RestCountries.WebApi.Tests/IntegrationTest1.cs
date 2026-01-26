@@ -1,3 +1,5 @@
+using RestCountries.WebApi.Tests.Data;
+
 namespace RestCountries.WebApi.Tests;
 
 public class IntegrationTest1
@@ -11,15 +13,16 @@ public class IntegrationTest1
     //
     // 2. Uncomment the following example test and update 'Projects.MyAspireApp_AppHost' in GlobalSetup.cs to match your AppHost project:
     //
-    //[ClassDataSource<HttpClientDataClass>]
-    //[Test]
-    //public async Task GetWebResourceRootReturnsOkStatusCode(HttpClientDataClass httpClientData)
-    //{
-    //    // Arrange
-    //    var httpClient = httpClientData.HttpClient;
-    //    // Act
-    //    var response = await httpClient.GetAsync("/");
-    //    // Assert
-    //    await Assert.That(response.StatusCode).IsEqualTo(HttpStatusCode.OK);
-    //}
+
+    [ClassDataSource<HttpClientDataClass>]
+    [Test]
+    public async Task PingReturnsOkStatusCode(HttpClientDataClass httpClientData)
+    {
+        // Arrange
+        var httpClient = httpClientData.HttpClient;
+        // Act
+        var response = await httpClient.GetAsync("/ping");
+        // Assert
+        await Assert.That(response.StatusCode).IsEqualTo(HttpStatusCode.OK);
+    }
 }

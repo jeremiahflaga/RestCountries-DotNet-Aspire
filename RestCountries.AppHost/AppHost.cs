@@ -12,4 +12,6 @@ builder.AddProject<Projects.SampleApp_WebApp>("sampleapp-webfrontend")
     .WithReference(sampleAppApiService)
     .WaitFor(sampleAppApiService);
 
+var restCountriesWebApi = builder.AddProject<Projects.RestCountries_WebApi>("restcountries-apiservice");
+
 builder.Build().Run();

@@ -5,5 +5,6 @@
   </Folder>
   <Project Path="RestCountries.AppHost/RestCountries.AppHost.csproj" />
   <Project Path="RestCountries.ServiceDefaults/RestCountries.ServiceDefaults.csproj" />
+  <Project Path="RestCountries.WebApi.Tests/RestCountries.WebApi.Tests.csproj" Id="f930a106-72f4-4f24-a50a-edf5e9613668" />
   <Project Path="SampleApp.TestProject/SampleApp.TestProject.csproj" />
 </Solution>

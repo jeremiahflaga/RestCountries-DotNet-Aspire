@@ -25,4 +25,16 @@ public class IntegrationTest1
         // Assert
         await Assert.That(response.StatusCode).IsEqualTo(HttpStatusCode.OK);
     }
+
+    [ClassDataSource<HttpClientDataClass>]
+    [Test]
+    public async Task GetCoutriesReturnsOkStatusCode(HttpClientDataClass httpClientData)
+    {
+        // Arrange
+        var httpClient = httpClientData.HttpClient;
+        // Act
+        var response = await httpClient.GetAsync("/api/Countries?Page=1&PageSize=2");
+        // Assert
+        await Assert.That(response.StatusCode).IsEqualTo(HttpStatusCode.OK);
+    }
 }

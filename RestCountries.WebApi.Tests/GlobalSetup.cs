@@ -19,7 +19,8 @@ public class GlobalHooks
     public static async Task SetUp()
     {
         // Arrange
-        var appHost = await DistributedApplicationTestingBuilder.CreateAsync<Projects.RestCountries_AppHost>();
+        var appHost = await DistributedApplicationTestingBuilder
+            .CreateAsync<Projects.RestCountries_AppHost>(["--integration-test"]);
         appHost.Services.ConfigureHttpClientDefaults(clientBuilder =>
         {
             clientBuilder.AddStandardResilienceHandler();

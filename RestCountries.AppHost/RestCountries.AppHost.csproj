@@ -22,4 +22,13 @@
     <ProjectReference Include="..\SampleApp\SampleApp.WebApp\SampleApp.WebApp.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Update="AppSettings\Development_RestCountries_AspNet_WebApi.appsettings.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="AppSettings\IntegrationTest_RestCountries_AspNet_WebApi.appsettings.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
 </Project>

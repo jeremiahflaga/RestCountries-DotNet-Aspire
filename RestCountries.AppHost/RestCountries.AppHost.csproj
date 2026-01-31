@@ -17,6 +17,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\RestCountries-BE-DotNet\RestCountries.MigrationService\RestCountries.MigrationService.csproj" />
     <ProjectReference Include="..\..\RestCountries-BE-DotNet\RestCountries.WebApi\RestCountries.WebApi.csproj" />
     <ProjectReference Include="..\SampleApp\SampleApp.ApiService\SampleApp.ApiService.csproj" />
     <ProjectReference Include="..\SampleApp\SampleApp.WebApp\SampleApp.WebApp.csproj" />
@@ -24,6 +25,9 @@
 
   <ItemGroup>
     <None Update="AppSettings\Development_RestCountries_AspNet_WebApi.appsettings.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="AppSettings\IntegrationTest_RestCountries_AspNet_MigrationService.appsettings.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Update="AppSettings\IntegrationTest_RestCountries_AspNet_WebApi.appsettings.json">

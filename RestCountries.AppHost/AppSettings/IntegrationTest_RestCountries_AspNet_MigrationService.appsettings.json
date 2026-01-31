@@ -1,0 +1,5 @@
+{
+  "ConnectionStrings": {
+    "DefaultConnection": "Server=(localdb)\\MSSQLLocalDB;Database=RestCountries_TEST_DB;Trusted_Connection=True;TrustServerCertificate=True"
+  }
+}

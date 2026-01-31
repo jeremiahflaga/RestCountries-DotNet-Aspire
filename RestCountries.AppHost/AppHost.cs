@@ -16,22 +16,29 @@ builder.AddProject<Projects.SampleApp_WebApp>("sampleapp-webfrontend")
     .WaitFor(sampleAppCache)
     .WithReference(sampleAppApiService)
     .WaitFor(sampleAppApiService);
+/* END of SampleApp */
+
+/* RestCountries */
+var restCountriesMigrationService = builder.AddProject<Projects.RestCountries_MigrationService>("restcountries-migrationservice");
 
 var restCountriesWebApi = builder.AddProject<Projects.RestCountries_WebApi>("restcountries-apiservice");
 
 if (isIntegrationTest)
-    AddTestEnvironmentVariablesForWebApi(restCountriesWebApi);
-
+{
+    AddTestEnvironmentVariablesForWebApi(restCountriesMigrationService, "IntegrationTest_RestCountries_AspNet_MigrationService.appsettings.json");
+    AddTestEnvironmentVariablesForWebApi(restCountriesWebApi, "IntegrationTest_RestCountries_AspNet_WebApi.appsettings.json");
+}
+/* END of RestCountries */
 
 builder.Build().Run();
 
-static void AddTestEnvironmentVariablesForWebApi(IResourceBuilder<ProjectResource> restCountriesWebApi)
+static void AddTestEnvironmentVariablesForWebApi(IResourceBuilder<ProjectResource> restCountriesWebApi, string appsettingsFileName)
 {
     // Use appsettings for integration testing, e.g. use test database
-    var appsettingsFileName = Path.Combine("AppSettings", "IntegrationTest_RestCountries_AspNet_WebApi.appsettings.json");
+    var appsettingsFilePath = Path.Combine("AppSettings", appsettingsFileName);
     var configBuilder = new ConfigurationBuilder()
             .SetBasePath(Directory.GetCurrentDirectory())
-            .AddJsonFile(appsettingsFileName, false, false);
+            .AddJsonFile(appsettingsFilePath, false, false);
     var environmentVariables = JsonToEnvironmentConverter.Convert(configBuilder);
     foreach (var envVar in environmentVariables)
     {

@@ -1,7 +1,7 @@
 <Solution>
   <Folder Name="/RestCountriesApp/">
-    <Project Path="../RestCountries-BE-DotNet/RestCountries.MigrationService/RestCountries.MigrationService.csproj" />
-    <Project Path="../RestCountries-BE-DotNet/RestCountries.WebApi/RestCountries.WebApi.csproj" />
+    <Project Path="../RestCountries-BE-AspNet/RestCountries.MigrationService/RestCountries.MigrationService.csproj" />
+    <Project Path="../RestCountries-BE-AspNet/RestCountries.WebApi/RestCountries.WebApi.csproj" />
   </Folder>
   <Folder Name="/SampleApp/">
     <Project Path="SampleApp/SampleApp.ApiService/SampleApp.ApiService.csproj" />
